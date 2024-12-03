@@ -1,0 +1,20 @@
+{
+    "name": "aoc",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+      "build": "tsc",
+      "start": "tsc && node dist/index.js",
+      "test": "vitest --reporter=basic --disable-console-intercept" 
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "typescript": "^5.4.4",
+      "vitest": "^2.1.1"
+    }
+  }
+  

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "target": "ESNext",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+    },
+    "lib": ["ESNext"],
+    "exclude": ["./dist", "vitest.config.ts"]
+  }
