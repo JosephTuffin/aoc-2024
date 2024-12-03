@@ -11,5 +11,5 @@ console.log("safe reports (part 1):", safeReportsPart1());
 console.log("safe reports (part 2):", safeReportsPart2());
 
 console.log("day 3");
-console.log("safe reports (part 1):", memoryMulPart1());
-console.log("safe reports (part 2):", memoryMulPart2());
+console.log("memory multiply (part 1):", memoryMulPart1());
+console.log("memory multiply (part 2):", memoryMulPart2());
