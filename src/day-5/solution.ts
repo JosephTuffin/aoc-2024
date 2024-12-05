@@ -6,11 +6,7 @@ const generateMap = (rules: string) =>
   }, {});
 
 const isLineValid = (line: string[], pageMap: Record<string, string[]>) =>
-  line.every(
-    (page, index, arr) =>
-      index === arr.length - 1 ||
-      arr.slice(index + 1).every((otherPage) => pageMap[page] && pageMap[page].includes(otherPage)),
-  );
+  line.every((page, index, arr) => arr.slice(index + 1).every((otherPage) => pageMap[page] && pageMap[page].includes(otherPage)));
 
 export const pageOrderingPart1 = (input: string, rules: string) => {
   const pageMap = generateMap(rules);
