@@ -1,10 +1,3 @@
-const input = `7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
-1 3 6 7 9`;
-
 const isSafe = (numbers: number[]) => {
   const safeAsc = numbers.every((n, index, arr) => {
     if (index === arr.length - 1) return true;
@@ -19,7 +12,7 @@ const isSafe = (numbers: number[]) => {
   return safeAsc || safeDesc;
 };
 
-export const safeReportsPart1 = () => {
+export const safeReportsPart1 = (input: string) => {
   const reports = input.split("\n");
   const safeReports = reports.reduce((count, report) => {
     const numbers = report.split(" ").map((n) => parseInt(n));
@@ -30,7 +23,7 @@ export const safeReportsPart1 = () => {
   return safeReports;
 };
 
-export const safeReportsPart2 = () => {
+export const safeReportsPart2 = (input: string) => {
   const reports = input.split("\n");
   const safeReports = reports.reduce((count, report) => {
     const numbers = report.split(" ").map((n) => parseInt(n));

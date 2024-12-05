@@ -1,6 +1,4 @@
-const input = "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))";
-
-export const memoryMulPart1 = () => {
+export const memoryMulPart1 = (input: string) => {
   const total = [...input.matchAll(/mul\(\d+,\d+\)/g)].reduce((count, match) => {
     const [a, b] = match[0].slice(4, -1).split(",");
     return count + parseInt(a) * parseInt(b);
@@ -9,7 +7,7 @@ export const memoryMulPart1 = () => {
   return total;
 };
 
-export const memoryMulPart2 = () => {
+export const memoryMulPart2 = (input: string) => {
   const total = [...input.matchAll(/mul\(\d+,\d+\)/g)].reduce((count, match) => {
     const disabled = input.slice(0, match.index).lastIndexOf("don't()");
     const enabled = input.slice(0, match.index).lastIndexOf("do()");

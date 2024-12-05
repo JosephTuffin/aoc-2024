@@ -1,15 +1,4 @@
-const input = `MMMSXXMASM
-MSAMXMSMSA
-AMXSXMAAMM
-MSAMASMSMX
-XMASAMXAMM
-XXAMMXXAMA
-SMSMSASXSS
-SAXAMASAAA
-MAMMMXMMMM
-MXMXAXMASX`;
-
-export const wordSearchPart1 = () => {
+export const wordSearchPart1 = (input: string) => {
   const grid = input.split("\n").map((row) => row.split(""));
   const total = grid.reduce(
     (count, row, x) =>
@@ -30,7 +19,7 @@ export const wordSearchPart1 = () => {
   return total;
 };
 
-export const wordSearchPart2 = () => {
+export const wordSearchPart2 = (input: string) => {
   const grid = input.split("\n").map((row) => row.split(""));
   const total = grid.reduce(
     (count, row, x) =>
