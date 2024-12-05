@@ -39,7 +39,7 @@ const isLineValid = (line: string[], pageMap: Record<string, string[]>) =>
   line.every(
     (page, index, arr) =>
       index === arr.length - 1 ||
-      arr.slice(index + 1).every((nextPage) => pageMap[page] && pageMap[page].includes(nextPage)),
+      arr.slice(index + 1).every((otherPage) => pageMap[page] && pageMap[page].includes(otherPage)),
   );
 
 export const pageOrderingPart1 = () => {
@@ -59,7 +59,7 @@ export const pageOrderingPart2 = () => {
     const validLine = isLineValid(lineArr, pageMap);
     if (validLine) return count;
     const orderedLine = lineArr.reduce((line, page, _, arr) => {
-      const filteredPages = arr.filter((otherPages) => pageMap[page] && pageMap[page].includes(otherPages));
+      const filteredPages = arr.filter((otherPage) => pageMap[page] && pageMap[page].includes(otherPage));
       line[arr.length - filteredPages.length - 1] = page;
       return line;
     }, new Array<string>(lineArr.length));
