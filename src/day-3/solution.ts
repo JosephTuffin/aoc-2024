@@ -1,14 +1,11 @@
-export const memoryMulPart1 = (input: string) => {
-  const total = [...input.matchAll(/mul\(\d+,\d+\)/g)].reduce((count, match) => {
+export const memoryMulPart1 = (input: string) =>
+  [...input.matchAll(/mul\(\d+,\d+\)/g)].reduce((count, match) => {
     const [a, b] = match[0].slice(4, -1).split(",");
     return count + parseInt(a) * parseInt(b);
   }, 0);
 
-  return total;
-};
-
-export const memoryMulPart2 = (input: string) => {
-  const total = [...input.matchAll(/mul\(\d+,\d+\)/g)].reduce((count, match) => {
+export const memoryMulPart2 = (input: string) =>
+  [...input.matchAll(/mul\(\d+,\d+\)/g)].reduce((count, match) => {
     const disabled = input.slice(0, match.index).lastIndexOf("don't()");
     const enabled = input.slice(0, match.index).lastIndexOf("do()");
     if (enabled > disabled || disabled === -1) {
@@ -17,6 +14,3 @@ export const memoryMulPart2 = (input: string) => {
     }
     return count;
   }, 0);
-
-  return total;
-};

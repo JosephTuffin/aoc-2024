@@ -14,17 +14,16 @@ const isLineValid = (line: string[], pageMap: Record<string, string[]>) =>
 
 export const pageOrderingPart1 = (input: string, rules: string) => {
   const pageMap = generateMap(rules);
-  const total = input.split("\n").reduce((count, line) => {
+  return input.split("\n").reduce((count, line) => {
     const lineArr = line.split(",");
     const validLine = isLineValid(lineArr, pageMap);
     return count + (validLine ? parseInt(lineArr[Math.round(lineArr.length - 1) / 2]) : 0);
   }, 0);
-  return total;
 };
 
 export const pageOrderingPart2 = (input: string, rules: string) => {
   const pageMap = generateMap(rules);
-  const total = input.split("\n").reduce((count, line) => {
+  return input.split("\n").reduce((count, line) => {
     const lineArr = line.split(",");
     const validLine = isLineValid(lineArr, pageMap);
     if (validLine) return count;
@@ -35,5 +34,4 @@ export const pageOrderingPart2 = (input: string, rules: string) => {
     }, new Array<string>(lineArr.length));
     return count + parseInt(orderedLine[Math.round(orderedLine.length - 1) / 2]);
   }, 0);
-  return total;
 };

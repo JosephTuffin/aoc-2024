@@ -8,9 +8,7 @@ const match = (input: string) => {
     },
     [[], []],
   );
-  left.sort();
-  right.sort();
-  return [left, right];
+  return [left.sort(), right.sort()];
 };
 
 export const matchTotalPart1 = (input: string) => {

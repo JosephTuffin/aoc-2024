@@ -1,6 +1,6 @@
 export const wordSearchPart1 = (input: string) => {
   const grid = input.split("\n").map((row) => row.split(""));
-  const total = grid.reduce(
+  return grid.reduce(
     (count, row, x) =>
       count +
       row.reduce((rowCount, _, y) => {
@@ -16,12 +16,11 @@ export const wordSearchPart1 = (input: string) => {
       }, 0),
     0,
   );
-  return total;
 };
 
 export const wordSearchPart2 = (input: string) => {
   const grid = input.split("\n").map((row) => row.split(""));
-  const total = grid.reduce(
+  return grid.reduce(
     (count, row, x) =>
       count +
       row.reduce((rowCount, _, y) => {
@@ -31,5 +30,4 @@ export const wordSearchPart2 = (input: string) => {
       }, 0),
     0,
   );
-  return total;
 };
