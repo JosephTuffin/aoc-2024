@@ -25,10 +25,10 @@ const checkVisited = (visited: Set<string>, x: number, y: number, direction: str
 const addVisited = (visited: Set<string>, x: number, y: number, direction: string) => visited.add(`${x},${y},${direction}`);
 
 const traverse = (grid: string[][], startPos: { x: number; y: number }, findLoop = false) => {
-  let { x, y } = startPos;
-  let direction = "up";
-  let isLooping = false;
-  const visited = new Set<string>();
+  let { x, y } = startPos,
+    direction = "up",
+    isLooping = false,
+    visited = new Set<string>();
   while (x !== -1 && y !== -1 && !isLooping) {
     if (grid[x][y] !== "^") grid[x][y] = "X";
     const nextPos = grid[x + moveX[direction]]?.[y + moveY[direction]];
