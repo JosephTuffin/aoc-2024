@@ -1,22 +1,8 @@
-const moveX = {
-  up: -1,
-  right: 0,
-  down: 1,
-  left: 0,
-};
-
-const moveY = {
-  up: 0,
-  right: 1,
-  down: 0,
-  left: -1,
-};
-
-const next = {
-  up: "right",
-  right: "down",
-  down: "left",
-  left: "up",
+const get = {
+  up: { moveX: -1, moveY: 0, next: "right" },
+  right: { moveX: 0, moveY: 1, next: "down" },
+  down: { moveX: 1, moveY: 0, next: "left" },
+  left: { moveX: 0, moveY: -1, next: "up" },
 };
 
 const createGrid = (input: string) => input.split("\n").map((row) => row.split(""));
@@ -31,11 +17,11 @@ const traverse = (grid: string[][], startPos: { x: number; y: number }, findLoop
     visited = new Set<string>();
   while (x !== -1 && y !== -1 && !isLooping) {
     if (grid[x][y] !== "^") grid[x][y] = "X";
-    const nextPos = grid[x + moveX[direction]]?.[y + moveY[direction]];
+    const nextPos = grid[x + get[direction].moveX]?.[y + get[direction].moveY];
     if (["#"].includes(nextPos))
-      (direction = next[direction]),
+      (direction = get[direction].next),
         findLoop && checkVisited(visited, x, y, direction) ? (isLooping = true) : findLoop && addVisited(visited, x, y, direction);
-    else if ([".", "X", "^"].includes(nextPos)) (x = x + moveX[direction]), (y = y + moveY[direction]);
+    else if ([".", "X", "^"].includes(nextPos)) (x = x + get[direction].moveX), (y = y + get[direction].moveY);
     else (x = -1), (y = -1);
   }
   return isLooping ? [] : grid;
