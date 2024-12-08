@@ -6,6 +6,8 @@ import { inputDay5, pageOrderingPart1, pageOrderingPart2, rulesDay5 } from "./da
 import { inputDay6, pathPositionsPart1, pathPositionsPart2 } from "./day-6/index.js";
 import { inputDay7 } from "./day-7/input.js";
 import { equationInsertPart1, equationInsertPart2 } from "./day-7/solution.js";
+import { inputDay8 } from "./day-8/input.js";
+import { uniqueAntinodesPart1, uniqueAntinodesPart2 } from "./day-8/solution.js";
 
 console.log("day 1");
 console.log("match total (part 1):", matchTotalPart1(inputDay1));
@@ -34,3 +36,7 @@ console.log("path positions (part 2):", pathPositionsPart2(inputDay6));
 console.log("day 7");
 console.log("equation insert (part 1):", equationInsertPart1(inputDay7));
 console.log("equation insert (part 2):", equationInsertPart2(inputDay7));
+
+console.log("day 8");
+console.log("unique antinodes (part 1):", uniqueAntinodesPart1(inputDay8));
+console.log("unique antinodes (part 2):", uniqueAntinodesPart2(inputDay8));
