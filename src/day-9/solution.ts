@@ -26,15 +26,15 @@ const orderDiskByBlock = (disk: number[]) => {
 const orderDiskByFile = (disk: number[]) => {
   const moved = [];
   for (let i = disk.length - 1; i > -1; i--) {
-    if (disk[i] === -1 || disk[i + 1] === disk[i] || moved.includes(disk[i])) continue;
-    const len = i - disk.indexOf(disk[i]) + 1;
+    if (disk[i] === -1 || disk[i - 1] === disk[i] || moved.includes(disk[i])) continue;
+    const len = disk.lastIndexOf(disk[i]) - i + 1;
     for (let j = 0; j < disk.length; j++) {
       if (j === i) break;
       if (disk[j] === -1) {
         const blocks = disk.slice(j, j + len);
         if (blocks.length === len && blocks.every((block) => block === -1)) {
-          const removed = disk.splice(j, len, ...disk.slice(i - len + 1, i + 1));
-          disk.splice(i - len + 1, len, ...removed);
+          const removed = disk.splice(j, len, ...disk.slice(i, i + len));
+          disk.splice(i, len, ...removed);
           moved.push(disk[j]);
           break;
         }
