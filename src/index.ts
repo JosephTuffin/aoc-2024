@@ -4,10 +4,9 @@ import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
 import { inputDay5, pageOrderingPart1, pageOrderingPart2, rulesDay5 } from "./day-5/index.js";
 import { inputDay6, pathPositionsPart1, pathPositionsPart2 } from "./day-6/index.js";
-import { inputDay7 } from "./day-7/input.js";
-import { equationInsertPart1, equationInsertPart2 } from "./day-7/solution.js";
-import { inputDay8 } from "./day-8/input.js";
-import { uniqueAntinodesPart1, uniqueAntinodesPart2 } from "./day-8/solution.js";
+import { equationInsertPart1, equationInsertPart2, inputDay7 } from "./day-7/index.js";
+import { inputDay8, uniqueAntinodesPart1, uniqueAntinodesPart2 } from "./day-8/index.js";
+import { diskFragmentPart1, diskFragmentPart2, inputDay9 } from "./day-9/index.js";
 
 console.log("day 1");
 console.log("match total (part 1):", matchTotalPart1(inputDay1));
@@ -40,3 +39,7 @@ console.log("equation insert (part 2):", equationInsertPart2(inputDay7));
 console.log("day 8");
 console.log("unique antinodes (part 1):", uniqueAntinodesPart1(inputDay8));
 console.log("unique antinodes (part 2):", uniqueAntinodesPart2(inputDay8));
+
+console.log("day 9");
+console.log("disk fragment (part 1):", diskFragmentPart1(inputDay9));
+console.log("disk fragment (part 2):", diskFragmentPart2(inputDay9));
