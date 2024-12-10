@@ -1,4 +1,6 @@
 import { inputDay1, matchTotalPart1, matchTotalPart2 } from "./day-1/index.js";
+import { inputDay10 } from "./day-10/input.js";
+import { trailheadsPart1, trailheadsPart2 } from "./day-10/solution.js";
 import { inputDay2, safeReportsPart1, safeReportsPart2 } from "./day-2/index.js";
 import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
@@ -43,3 +45,7 @@ console.log("unique antinodes (part 2):", uniqueAntinodesPart2(inputDay8));
 console.log("day 9");
 console.log("disk fragment (part 1):", diskFragmentPart1(inputDay9));
 console.log("disk fragment (part 2):", diskFragmentPart2(inputDay9));
+
+console.log("day 9");
+console.log("trailheads (part 1):", trailheadsPart1(inputDay10));
+console.log("trailheads (part 2):", trailheadsPart2(inputDay10));
