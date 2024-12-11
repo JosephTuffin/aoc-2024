@@ -2,7 +2,7 @@ import { inputDay1, matchTotalPart1, matchTotalPart2 } from "./day-1/index.js";
 import { inputDay10 } from "./day-10/input.js";
 import { trailheadsPart1, trailheadsPart2 } from "./day-10/solution.js";
 import { inputDay11 } from "./day-11/input.js";
-import { stoneSplitPart1 } from "./day-11/solution.js";
+import { stoneSplitPart1, stoneSplitPart2 } from "./day-11/solution.js";
 import { inputDay2, safeReportsPart1, safeReportsPart2 } from "./day-2/index.js";
 import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
@@ -54,3 +54,4 @@ console.log("trailheads (part 2):", trailheadsPart2(inputDay10));
 
 console.log("day 11");
 console.log("stone split (part 1):", stoneSplitPart1(inputDay11));
+console.log("stone split (part 2):", stoneSplitPart2(inputDay11));
