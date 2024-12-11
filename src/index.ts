@@ -1,6 +1,8 @@
 import { inputDay1, matchTotalPart1, matchTotalPart2 } from "./day-1/index.js";
 import { inputDay10 } from "./day-10/input.js";
 import { trailheadsPart1, trailheadsPart2 } from "./day-10/solution.js";
+import { inputDay11 } from "./day-11/input.js";
+import { stoneSplitPart1 } from "./day-11/solution.js";
 import { inputDay2, safeReportsPart1, safeReportsPart2 } from "./day-2/index.js";
 import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
@@ -46,6 +48,9 @@ console.log("day 9");
 console.log("disk fragment (part 1):", diskFragmentPart1(inputDay9));
 console.log("disk fragment (part 2):", diskFragmentPart2(inputDay9));
 
-console.log("day 9");
+console.log("day 10");
 console.log("trailheads (part 1):", trailheadsPart1(inputDay10));
 console.log("trailheads (part 2):", trailheadsPart2(inputDay10));
+
+console.log("day 11");
+console.log("stone split (part 1):", stoneSplitPart1(inputDay11));
