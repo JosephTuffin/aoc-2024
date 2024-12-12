@@ -1,1 +1,1 @@
-export const inputDay11 = `4610211 4 0 59 3907 201586 929 33750`;
+export const inputDay11 = `125 17`;
