@@ -1,5 +1,3 @@
-import fs from "fs";
-
 const width = 101;
 const height = 103;
 
@@ -44,18 +42,6 @@ const updatePositions = (grid: { robots: number }[][], robots: { start: number[]
   robots.forEach(({ start: [x, y], velocity: [vx, vy] }) => {
     grid[getCoordinate(y, vy, seconds, grid.length)][getCoordinate(x, vx, seconds, grid[0].length)].robots++;
   });
-};
-
-const writeToFile = (grids: { robots: number }[][][]) => {
-  const output = [];
-  grids.forEach((grid, index) => {
-    output.push(`After ${index} seconds:`);
-    grid.forEach((row) => {
-      output.push(row.map(({ robots }) => (robots ? `${robots}` : ".")).join(""));
-    });
-    output.push("");
-  });
-  fs.writeFileSync("output.txt", output.join("\n"));
 };
 
 export const robotQuadrantsPart1 = (input: string) => {
