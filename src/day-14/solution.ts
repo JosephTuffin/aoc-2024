@@ -1,5 +1,6 @@
-const width = 101;
-const height = 103;
+const width = 11; //101
+const height = 7; //103
+const maxSeconds = 100; //7500
 
 const createGrid = (x: number, y: number) => Array.from({ length: y }, () => Array.from({ length: x }, () => ({ robots: 0 })));
 
@@ -54,7 +55,7 @@ export const robotQuadrantsPart1 = (input: string) => {
 export const robotQuadrantsPart2 = (input: string) => {
   const robots = formatRobots(input);
   const scores = [];
-  for (let seconds = 0; seconds < 7500; seconds++) {
+  for (let seconds = 0; seconds < maxSeconds; seconds++) {
     const grid = createGrid(width, height);
     updatePositions(grid, robots, 100);
     scores.push(getQuadrants(grid));

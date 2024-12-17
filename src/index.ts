@@ -4,6 +4,7 @@ import { inputDay11, stoneSplitPart1, stoneSplitPart2 } from "./day-11/index.js"
 import { gardenGroupsPart1, gardenGroupsPart2, inputDay12 } from "./day-12/index.js";
 import { clawTokensPart1, clawTokensPart2, inputDay13 } from "./day-13/index.js";
 import { inputDay14, robotQuadrantsPart1, robotQuadrantsPart2 } from "./day-14/index.js";
+import { inputDay15, movementsDay15, warehouseBoxesPart1, warehouseBoxesPart2 } from "./day-15/index.js";
 import { inputDay2, safeReportsPart1, safeReportsPart2 } from "./day-2/index.js";
 import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
@@ -68,3 +69,7 @@ console.log("claw tokens (part 2):", clawTokensPart2(inputDay13));
 console.log("day 14");
 console.log("robot quadrants (part 1):", robotQuadrantsPart1(inputDay14));
 console.log("robot quadrants (part 2):", robotQuadrantsPart2(inputDay14));
+
+console.log("day 15");
+console.log("warehouse boxes (part 1):", warehouseBoxesPart1(inputDay15, movementsDay15));
+console.log("warehouse boxes (part 2):", warehouseBoxesPart2(inputDay15, movementsDay15));
