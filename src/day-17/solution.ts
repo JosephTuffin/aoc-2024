@@ -103,6 +103,13 @@ export const computerProgramPart1 = (programInput: string, registerInput: string
   return runProgram(program, registers).join(",");
 };
 
+/**
+ * The output length (n) is based on the value of A where n = log8(A).
+ * To get an output of length n, the value of A must be at 8^(n-1) and 8^n.
+ * Start with power (p) = n - 1 and find any A that produces the last n - p values correctly.
+ * A is calculated as A = A + 8^p * x where x is 0 to 7 to cover all 3 bit values.
+ * Continue recusively, decreasing p by 1 until p = 0 at which point the correct value of A is found.
+ */
 export const computerProgramPart2 = (programInput: string, _registerInput: string) => {
   const program = getProgram(programInput);
   const final = [];
