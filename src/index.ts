@@ -7,6 +7,8 @@ import { inputDay14, robotQuadrantsPart1, robotQuadrantsPart2 } from "./day-14/i
 import { inputDay15, movementsDay15, warehouseBoxesPart1, warehouseBoxesPart2 } from "./day-15/index.js";
 import { inputDay16, reindeerMazePart1, reindeerMazePart2 } from "./day-16/index.js";
 import { computerProgramPart1, computerProgramPart2, inputDay17, registersDay17 } from "./day-17/index.js";
+import { inputDay18, ramRunPart1, ramRunPart2 } from "./day-18/index.js";
+import { inputDay19, patternsDay19, towelDesignsPart1, towelDesignsPart2 } from "./day-19/index.js";
 import { inputDay2, safeReportsPart1, safeReportsPart2 } from "./day-2/index.js";
 import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
@@ -83,3 +85,11 @@ console.log("reindeer maze (part 2):", reindeerMazePart2(inputDay16));
 console.log("day 17");
 console.log("computer program (part 1):", computerProgramPart1(inputDay17, registersDay17));
 console.log("computer program (part 2):", computerProgramPart2(inputDay17, registersDay17));
+
+console.log("day 18");
+console.log("ram run (part 1):", ramRunPart1(inputDay18));
+console.log("ram run (part 2):", ramRunPart2(inputDay18));
+
+console.log("day 19");
+console.log("towel designs (part 1):", towelDesignsPart1(inputDay19, patternsDay19));
+console.log("towel designs (part 2):", towelDesignsPart2(inputDay19, patternsDay19));
