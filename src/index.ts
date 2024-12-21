@@ -10,6 +10,7 @@ import { computerProgramPart1, computerProgramPart2, inputDay17, registersDay17 
 import { inputDay18, ramRunPart1, ramRunPart2 } from "./day-18/index.js";
 import { inputDay19, patternsDay19, towelDesignsPart1, towelDesignsPart2 } from "./day-19/index.js";
 import { inputDay2, safeReportsPart1, safeReportsPart2 } from "./day-2/index.js";
+import { inputDay20, raceConditionPart1, raceConditionPart2 } from "./day-20/index.js";
 import { inputDay3, memoryMulPart1, memoryMulPart2 } from "./day-3/index.js";
 import { inputDay4, wordSearchPart1, wordSearchPart2 } from "./day-4/index.js";
 import { inputDay5, pageOrderingPart1, pageOrderingPart2, rulesDay5 } from "./day-5/index.js";
@@ -93,3 +94,7 @@ console.log("ram run (part 2):", ramRunPart2(inputDay18));
 console.log("day 19");
 console.log("towel designs (part 1):", towelDesignsPart1(inputDay19, patternsDay19));
 console.log("towel designs (part 2):", towelDesignsPart2(inputDay19, patternsDay19));
+
+console.log("day 20");
+console.log("race condition (part 1):", raceConditionPart1(inputDay20));
+console.log("race condition (part 2):", raceConditionPart2(inputDay20));
